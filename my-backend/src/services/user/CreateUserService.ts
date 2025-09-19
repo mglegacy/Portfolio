@@ -13,7 +13,7 @@ class CreateUserService{
             throw Error("Name incorrect")
         }
 
-        //Verificar se o email já está cadastrado
+        //Verificar se o Nome já está cadastrado
         const userAlreadyExists = await prismaClient.users.findFirst({
             where : {
                 name: name
