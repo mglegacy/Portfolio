@@ -12,12 +12,14 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
-model user{ 
+model Users{ 
   id String @id @default(uuid())
   name String
   password String
   created_at DateTime? @default(now()) //por default == por padrão
   updated_at DateTime? @default(now())
+
+ @@map("Users")
 }
 
 model project{
@@ -29,6 +31,8 @@ model project{
   tecnologies String
   created_at DateTime? @default(now()) //por default == por padrão
   updated_at DateTime? @default(now())
+
+@@map("Projects")
 }
   
 // Rodar a migration depois de criar seu model

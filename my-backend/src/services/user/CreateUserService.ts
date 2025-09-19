@@ -14,7 +14,7 @@ class CreateUserService{
         }
 
         //Verificar se o email já está cadastrado
-        const userAlreadyExists = await prismaClient.user.findFirst({
+        const userAlreadyExists = await prismaClient.users.findFirst({
             where : {
                 name: name
             }
@@ -27,7 +27,7 @@ class CreateUserService{
         const passwordHash = await hash(password, 8)
 
         //Adicionar usuário ao banco de dados
-        const user = await prismaClient.user.create({
+        const user = await prismaClient.users.create({
             data:{
                 name: name,
                 password: passwordHash,

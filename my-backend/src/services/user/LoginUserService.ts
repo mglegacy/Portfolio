@@ -9,7 +9,7 @@ interface LoginRequest{
 class LoginUserService{
     async execute({name, password}: LoginRequest, res:Response){
         //Verificar se o usuário existe
-        const user = await prismaClient.user.findFirst({
+        const user = await prismaClient.users.findFirst({
             where:{
                 name: name
             }
