@@ -6,6 +6,7 @@ import { CreateUserController } from "./controllers/users/CreateUserController";
 import { LoginUserController } from "./controllers/users/LoginUserController";
 import { isAuthenticated } from "./middlewares/isAuthenticated";
 import { CreateProjectController } from "./controllers/projects/CreateProjectController";
+import { DeleteProjectController } from "./controllers/projects/DeleteProjectController";
 
 const router = Router();
 const upload = multer(uploadConfig.upload("./temp"))
@@ -18,6 +19,7 @@ router.post('/admin/login', isAuthenticated, new LoginUserController().handle)
 
 //rota de projetos
 router.post('/admin/projects', isAuthenticated, upload.single('banner'), new CreateProjectController().handle)
+router.delete('/admin/delete', isAuthenticated, new DeleteProjectController().handle)
 
 
 export {router};
