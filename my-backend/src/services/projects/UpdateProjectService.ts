@@ -14,7 +14,7 @@ interface UpdateProjectRequest{
 class UpdateProjectService{
     async execute({id, banner, title, type_application, description, tecnologies}: UpdateProjectRequest){
         const project = await prismaClient.projects.update({
-            where: { id },
+            where: { id: id },
             data:{
                 titulo: title,
                 banner: banner,
