@@ -1,0 +1,9 @@
+<svg width="400" height="160" viewBox="0 0 400 160" xmlns="http://www.w3.org/2000/svg">
+          <rect x="135" y="56" width="48" height="48" rx="8" fill="#030213"/>
+          <rect x="145" y="66" width="12" height="8" rx="2" fill="white"/>
+          <rect x="145" y="80" width="16" height="4" rx="1" fill="white"/>
+          <rect x="145" y="88" width="20" height="4" rx="1" fill="white"/>
+          <circle cx="175" cy="50" r="8" fill="#e9ebef"/>
+          <path d="M171 47 L175 53 L179 47" stroke="#030213" stroke-width="2" fill="none"/>
+          <text x="190" y="88" fill="#030213" font-family="Arial, sans-serif" font-size="20" font-weight="500">MG Legacy</text>
+        </svg>
