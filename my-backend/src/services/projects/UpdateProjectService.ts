@@ -1,7 +1,6 @@
 import prismaClient from "../../prisma";
 
 interface UpdateProjectRequest{
-
     id: string;
     title: string;
     banner: string;
