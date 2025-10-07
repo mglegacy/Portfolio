@@ -19,7 +19,9 @@ router.post('/admin/login', isAuthenticated, new LoginUserController().handle)
 
 //rota de projetos
 router.post('/admin/projects', isAuthenticated, upload.single('banner'), new CreateProjectController().handle)
-router.delete('/admin/delete', isAuthenticated, new DeleteProjectController().handle)
+
+//rota de deletar projetos
+router.delete('/admin/delete', isAuthenticated, new DeleteProjectController().handle) 
 
 
 export {router};
