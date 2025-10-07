@@ -6,7 +6,9 @@ import { CreateUserController } from "./controllers/users/CreateUserController";
 import { LoginUserController } from "./controllers/users/LoginUserController";
 import { isAuthenticated } from "./middlewares/isAuthenticated";
 import { CreateProjectController } from "./controllers/projects/CreateProjectController";
-import { DeleteProjectController } from "./controllers/projects/DeleteProjectController";
+import { ListProjectcontroller } from "./controllers/projects/ListProjectController";
+import { UpdateProjectController } from "./controllers/projects/UpdateProjectController";
+import { DetailProjectController } from "./controllers/projects/DetailProjectController";
 
 const router = Router();
 const upload = multer(uploadConfig.upload("./temp"))
@@ -22,6 +24,13 @@ router.post('/admin/projects', isAuthenticated, upload.single('banner'), new Cre
 
 //rota de deletar projetos
 router.delete('/admin/delete', isAuthenticated, new DeleteProjectController().handle) 
+
+router.get('/listprojects', new ListProjectcontroller().handle)
+
+router.get('/detail/:id', new DetailProjectController().handle)
+
+router.put('/admin/update/:id', isAuthenticated, upload.single('banner'), new UpdateProjectController().handle)
+
 
 
 export {router};

@@ -12,11 +12,12 @@ class UpdateProjectController {
             banner,
             type_application,
             description,
-            tecnologies } = req.body;
+            tecnologies 
+        } = req.body;
 
         const updateProjectService = new UpdateProjectService();
-        const project = await updateProjectService.execute({
 
+        const project = await updateProjectService.execute({
             id,
             title,
             banner,

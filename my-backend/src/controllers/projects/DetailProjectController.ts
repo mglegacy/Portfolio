@@ -4,13 +4,11 @@ import { DetailProjectService } from "../../services/projects/DetailProjectServi
 class DetailProjectController{
     async handle(req: Request, res:Response){
         
-        const detail_id = req.query.id as string;
+        const {id} = req.params;
 
         const detailProjectService = new DetailProjectService()
 
-        const project = await detailProjectService.execute({
-            detail_id
-        });
+        const project = await detailProjectService.execute({id});
 
         return res.json(project)
     }
