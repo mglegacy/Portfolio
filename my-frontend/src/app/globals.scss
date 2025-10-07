@@ -6,6 +6,20 @@
 }
 
 :root{ //Cores reaproveitadas
-   --white: #fff;
+  --white: #fff;
   --black: #000;
+
+  --gray-11: #1C1C1C;
+  --gray-31: #d3d3d3;
+  --gray-21: #363636;
+
+  --blue-11: #0b092b;
+  --blue-21:#1c1961;
 }
+
+body {
+  background: var(--gray-11);
+}
+
+
+

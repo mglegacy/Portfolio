@@ -1,7 +1,7 @@
 import { Header } from './components/header';
 import styles  from './page.module.scss'
 import Image from 'next/image';
-import logoImg from '/public/mg-legacy-tech-lg.svg';
+import logoImg from '/public/mg-legacy-modern-md-dark.svg';
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
         <Image
         src={logoImg}
         alt='Logo da Empresa'
-        width={500}
+        
         />
 
         <Header/>

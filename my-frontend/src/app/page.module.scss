@@ -1,0 +1,10 @@
+.container{
+    width: 100%;
+    min-height: 100vh; /* 👈 ocupa 100% da altura da tela */
+}
+
+.logo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

@@ -1,6 +1,0 @@
-<svg width="400" height="160" viewBox="0 0 400 160" xmlns="http://www.w3.org/2000/svg">
-          <rect x="140" y="60" width="40" height="40" rx="8" fill="#030213"/>
-          <path d="M150 72 L156 78 L150 84 M164 72 L170 78 L164 84" stroke="white" stroke-width="2" fill="none"/>
-          <text x="190" y="75" fill="#030213" font-family="Arial, sans-serif" font-size="20" font-weight="500">MG</text>
-          <text x="190" y="92" fill="#717182" font-family="Arial, sans-serif" font-size="14">Legacy</text>
-        </svg>
