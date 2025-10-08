@@ -1,0 +1,53 @@
+.headerContainer{
+  margin-top: 2rem;
+}
+
+.headerMenu{
+  max-width: 1700px;
+  height: 5rem;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  
+
+  nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 32rem;
+
+  min-height: 3rem;
+  background: var(--white);
+  padding: 0 20px;
+  border-radius: 35px;
+
+  .text{
+    color: var(--black);
+    padding: 8px 12px;
+    border-bottom: 3px solid transparent;
+    font-size: 22px;
+    text-decoration: none;
+    transition: all 0.3s;
+
+    &:hover{
+      color: var(--gray-21)
+    }
+
+    &.active {
+      color: var(--white);
+      background-color: var(--gray-21); // fundo escuro para aba ativa
+      border-radius: 30px; // cantos arredondados na aba ativa
+      border-bottom: none;
+    }
+  }
+
+
+  }
+
+}
+
+
