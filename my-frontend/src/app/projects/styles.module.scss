@@ -1,0 +1,9 @@
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 3rem; // altura da tela menos altura do Header
+    padding-top: 5rem;              // distância do topo
+    text-align: center;
+    flex-direction: column;         
+}
