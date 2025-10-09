@@ -1,5 +1,13 @@
 .headerContainer{
   margin-top: 2rem;
+
+  @media (max-width: 720px) {
+    padding: 0 20px;
+  }
+  @media (max-width: 1080px){
+    height: 4rem;
+    padding: 0 1rem;
+}
 }
 
 .headerMenu{
@@ -27,15 +35,10 @@
 
   .text{
     color: var(--black);
-    padding: 8px 12px;
+    padding: 5px 12px;
     border-bottom: 3px solid transparent;
-    font-size: 22px;
+    font-size: 30px;
     text-decoration: none;
-    
-
-    &:hover{
-      color: var(--gray-21)
-    }
 
     &.active {
       color: var(--white);
@@ -43,11 +46,17 @@
       border-radius: 30px; // cantos arredondados na aba ativa
       border-bottom: none;
     }
+
+    @media (max-width: 720px) {
+    &.active {
+      border-radius: 30px; // arredonda menos
+      margin-top: 2px;
+      margin-bottom: 2px;
+      padding: 2px 13px;
+    }
   }
-
-
+  }
   }
 
 }
-
 

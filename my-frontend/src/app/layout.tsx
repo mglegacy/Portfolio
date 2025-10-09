@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Smooch_Sans } from "next/font/google";
 import { Header } from "./components/header";
 import "./globals.scss";
 
-const inter = Inter({ subsets: ["latin"] });
+const smooch_Sans = Smooch_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-br">
-      <body className={inter.className}>
+      <body className={smooch_Sans.className}>
         <Header/>
         {children} {/* toda página entra aqui */}
       </body>
