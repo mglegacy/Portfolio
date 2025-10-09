@@ -9,6 +9,7 @@ import { CreateProjectController } from "./controllers/projects/CreateProjectCon
 import { ListProjectcontroller } from "./controllers/projects/ListProjectController";
 import { UpdateProjectController } from "./controllers/projects/UpdateProjectController";
 import { DetailProjectController } from "./controllers/projects/DetailProjectController";
+import { DeleteProjectController } from "./controllers/projects/DeleteProjectController";
 
 const router = Router();
 const upload = multer(uploadConfig.upload("./temp"))
