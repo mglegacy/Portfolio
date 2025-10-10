@@ -6,10 +6,7 @@ class CreateProjectController{
         const {title, type_application, banner, description, tecnologies} = req.body
 
         const createProjectService = new CreateProjectService()
-
-        console.log("req.file:", req.file);
-        console.log("req.body:", req.body);
-
+        
         if(!req.file){
             throw new Error("Error Upload")
         }else{
