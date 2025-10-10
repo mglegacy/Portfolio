@@ -11,7 +11,7 @@ export default{
                 destination : resolve(__dirname, '..', '..', folder), // destination → Onde o arquivo será salvo.
                 filename : (request, file, callback) => { // filename → Como o arquivo será nomeado.
                     const fileHash = crypto.randomBytes(16).toString("hex"); //Gerando nome único em hexatecimal
-                    const fileName = `${fileHash} - ${file.originalname}` //Junta o hash + nome original do arquivo enviado.
+                    const fileName = `${fileHash}-${file.originalname}` //Junta o hash + nome original do arquivo enviado.
 
                     return callback(null, fileName)
                 }

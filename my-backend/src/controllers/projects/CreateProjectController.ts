@@ -7,6 +7,9 @@ class CreateProjectController{
 
         const createProjectService = new CreateProjectService()
 
+        console.log("req.file:", req.file);
+        console.log("req.body:", req.body);
+
         if(!req.file){
             throw new Error("Error Upload")
         }else{
