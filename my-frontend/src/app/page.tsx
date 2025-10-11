@@ -17,7 +17,9 @@ export default  async function Home() {
   async function handleListProjects(){
     try{
       const projects = await api.get("/listprojects")
+
       return projects.data;
+
     }catch(err){
       console.log("Erro ao buscar os projetos:", err);
       return [];
@@ -33,11 +35,11 @@ export default  async function Home() {
           <h1 className={styles.textTwo}>MG Legacy</h1>
           <h2 className={styles.typing}>Construindo soluções digitais com tecnologia, performance e propósito.</h2>
 
-          <div className={styles.containerBody}>
+           <div className={styles.containerBody}>
+              <h1>Projects</h1>
+          </div>
 
-              <section className={styles.listProjects}>
-
-                <h1>Projects</h1>
+              <div className={styles.listProjects}>
 
                 <div className={styles.projectsGrid}>
 
@@ -45,22 +47,24 @@ export default  async function Home() {
                       <button key={project.id} className={styles.project}>
                         <div className={styles.card}>
                           <h3>{project.titulo}</h3>
-                          <h3>{project.tipo}</h3>
+                          
+                          <h4 className={styles.type}>{project.tipo}</h4>
+
                           <Image
                             src={`http://localhost:8000/files/${project.banner}`}
                             alt={project.titulo}
-                            width={400}
-                            height={300}
+                            width={130}
+                            height={100}
                           />
-                          <p>{project.description}</p>
+                          <p className={styles.descricao}>{project.description}</p>
+
                           <p>{project.tecnologies}</p>
                 </div>
               </button>
             ))}
           </div>
-              </section>
-          </div>
-      </div>
+              </div>
+   </div>
     </>
   )
 }

@@ -42,3 +42,101 @@
     border-color: transparent;
   }
 }
+
+.containerBody{
+  width: 60%;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  padding-left: 2rem; 
+  margin-bottom: 2rem; 
+  margin-top: 10rem;
+}
+
+.project{
+  background: var(--white);
+  width: 305px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 8rem;
+  
+}
+
+.listProjects {
+  width: 100%;
+  padding: 2rem 4rem;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); // Deixa responsivo
+  gap: 2rem; // Espaçamento entre os cards
+  justify-items: center; // Centraliza os cards
+}
+
+.project {
+  all: unset; // Remove estilos padrão do botão
+  cursor: pointer;
+}
+
+.card {
+  background-color: #d8d8d8;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 500px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  h3{
+    font-size: 1.50rem;
+    color: black;
+  }
+
+  h4 {
+    font-size: 1.10rem;
+    color: #222;
+    margin-top: 0.50rem;
+
+  }
+
+  img {
+  border-radius: 12px;
+  margin-top: 1rem;
+  width: 100%;           // ocupa toda a largura do card
+  height: 100px;         // altura fixa
+  object-fit: cover;     // mantém proporção e corta o excesso
+}
+
+ .descricao
+  {
+    margin-top: 1rem;
+    color: rgb(87, 87, 87);
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  p {
+    color: #555;
+    margin-top: auto;
+    line-height: 1.4;
+  }
+
+}
+.type{
+  background: var(--white);
+  padding: 4px 8px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+
