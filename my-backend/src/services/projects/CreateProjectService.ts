@@ -5,7 +5,7 @@ interface ProjectsRequest{
     type_application: string;
     banner: string;
     description: string;
-    tecnologies: string;
+    tecnologies: string[];
 }
 
 

@@ -15,6 +15,12 @@ class UpdateProjectController {
             tecnologies 
         } = req.body;
 
+        // Converter para array se necessário
+const tecnologiesArray =
+  typeof tecnologies === "string"
+    ? tecnologies.split(",").map(t => t.trim())
+    : tecnologies;
+
         const updateProjectService = new UpdateProjectService();
 
         const project = await updateProjectService.execute({
@@ -23,7 +29,7 @@ class UpdateProjectController {
             banner,
             type_application,
             description,
-            tecnologies
+            tecnologies: tecnologiesArray,
         })
         return res.json(project);
     }

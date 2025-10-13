@@ -50,16 +50,18 @@ export default  async function Home() {
                           
                           <h4 className={styles.type}>{project.tipo}</h4>
 
-                          <Image
-                            src={`http://localhost:8000/files/${project.banner}`}
-                            alt={project.titulo}
-                            width={130}
-                            height={100}
-                          />
+                          <div className={styles.imageContainer}>
+                            <Image
+                              src={`http://localhost:8000/files/${project.banner}`}
+                              alt={project.titulo}
+
+                              fill
+                            />
+                            </div>
                           <p className={styles.descricao}>{project.description}</p>
 
                           <p>{project.tecnologies}</p>
-                </div>
+                        </div>
               </button>
             ))}
           </div>

@@ -10,14 +10,20 @@ class CreateProjectController{
         if(!req.file){
             throw new Error("Error Upload")
         }else{
-            const {originalname, filename : banner} = req.file;
+            const { filename: bannerFile } = req.file;
+
+            // Converter string para array se necessário
+            const tecnologiesArray =
+                typeof tecnologies === "string"
+                ? tecnologies.split(",").map((t) => t.trim())
+                : tecnologies;
 
             const product =  await createProjectService.execute({
             title,
             type_application,
-            banner,
+            banner:bannerFile,
             description,
-            tecnologies
+            tecnologies: tecnologiesArray,
             });
             return res.json(product)
 

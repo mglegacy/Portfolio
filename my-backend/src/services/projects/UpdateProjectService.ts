@@ -6,7 +6,7 @@ interface UpdateProjectRequest{
     banner: string;
     type_application: string;
     description: string;
-    tecnologies: string;
+    tecnologies: string[];
 
 }
 
