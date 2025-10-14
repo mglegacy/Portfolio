@@ -47,9 +47,13 @@
   width: 100%;                // ocupa toda a largura do container pai
   max-width: 1200px;          // opcional, limite máximo
   margin-top: 10rem;
-  margin-bottom: 3rem;
-  padding: 0 rem;            // padding interno para responsividade
+  margin-bottom: 5rem;
+  padding: 0 1rem;            // padding interno para responsividade
+  align-items: flex-start;;
+  text-align: left;
+  
 }
+
 
 .project{
   background: var(--white);
@@ -66,13 +70,14 @@
   max-width: 1200px;
   margin: 0 auto;             // centraliza o grid
   padding: 0 1rem;
+  margin-top: 5rem;
 }
 
 .projectsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, 320px); // Deixa responsivo
   gap: 4rem; // Espaçamento entre os cards
-  justify-content: center; // Centraliza os cards
+  justify-content: start; // Centraliza os cards
 
 }
 
@@ -92,6 +97,8 @@
   flex-direction: column;
   align-items: flex-start;
   transition: transform 0.3s ease, box-shadow 0.3s ease; // controla a suavidade
+  text-align: left;
+  margin-top: 3rem;
 
   &:hover {
     transform: scale(1.05); // aumenta 5% ao passar o mouse
@@ -136,11 +143,19 @@
   
 }
 
+.date {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+
+}
+
 .type{
   background: var(--white);
   padding: 4px 8px;
   border-radius: 10px;
   display: inline-block;
+  justify-content: space-between;
 }
 
 .tecnologias{
@@ -161,14 +176,10 @@
 }
 
 .techTag {
-  color: #222;
+  color: #222;     
   padding: 4px 8px;
   border-radius: 8px;
   font-size: 0.9rem;
   font-weight: bold;
-  border: 2px solid var(--blue-11);
+  border: 1px solid var(--blue-11);
 }
-
-
-
-
