@@ -7,7 +7,7 @@ interface Project {
   tipo: string;
   banner: string;
   description: string;
-  tecnologies: string;
+  tecnologies: string[];
   created_at: string;
   updated_at: string;
 }
@@ -58,15 +58,22 @@ export default  async function Home() {
                               fill
                             />
                             </div>
+
                           <p className={styles.descricao}>{project.description}</p>
 
-                          <p>{project.tecnologies}</p>
+                          <div className={styles.tecnologiesContainer}>
+                            {project.tecnologies.map((tech, index) => (
+                            <span key={index} className={styles.techTag}>
+                                  {tech}
+                                </span>
+                                ))}
+                              </div>
                         </div>
               </button>
             ))}
           </div>
               </div>
-   </div>
-    </>
+  </div>
+  </>
   )
 }
