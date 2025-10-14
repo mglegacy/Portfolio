@@ -42,36 +42,34 @@ export default  async function Home() {
       <h1>Projects</h1>
 
       <section className={styles.listProjects}>
-        <ul className={styles.projectsGrid}>
+        <div className={styles.projectsGrid}>
           {projects.map((project: Project) => (
-            <li key={project.id}>
-              <article className={styles.card}>
-                <header>
-                  <h3>{project.titulo}</h3>
-                  <h4 className={styles.type}>{project.tipo}</h4>
-                </header>
+            <article key={project.id} className={styles.card}>
+              <header>
+                <h3>{project.titulo}</h3>
+                <h4 className={styles.type}>{project.tipo}</h4>
+              </header>
 
-                <figure className={styles.imageContainer}>
-                  <Image
-                    src={`http://localhost:8000/files/${project.banner}`}
-                    alt={project.titulo}
-                    fill
-                  />
-                </figure>
+              <figure className={styles.imageContainer}>
+                <Image
+                  src={`http://localhost:8000/files/${project.banner}`}
+                  alt={project.titulo}
+                  fill
+                />
+              </figure>
 
-                <p className={styles.descricao}>{project.description}</p>
+              <p className={styles.descricao}>{project.description}</p>
 
-                <footer className={styles.tecnologiesContainer}>
-                  {project.tecnologies.map((tech, index) => (
-                    <span key={index} className={styles.techTag}>
-                      {tech}
-                    </span>
-                  ))}
-                </footer>
-              </article>
-            </li>
+              <div className={styles.tecnologiesContainer}>
+                {project.tecnologies.map((tech, index) => (
+                  <span key={index} className={styles.techTag}>
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </article>
           ))}
-        </ul>
+        </div>
       </section>
     </section>
   </main>
