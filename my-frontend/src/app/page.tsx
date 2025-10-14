@@ -49,17 +49,17 @@ export default  async function Home() {
           {projects.map((project: Project) => (
             <article key={project.id} className={styles.card}>
               <h3>{project.titulo}</h3>
-              
+
                <div className={styles.infoLine}>
-    <h4 className={styles.type}>{project.tipo}</h4>
-    <div className={styles.date}>
-      <CalendarArrowUp size={16} color="#000000ff" />
-      {new Date(project.created_at).toLocaleDateString('pt-BR', {
-        month: 'long',
-        year: 'numeric',
-      })}
-    </div>
-  </div>
+                <h4 className={styles.type}>{project.tipo}</h4>
+                <div className={styles.date}>
+                  <CalendarArrowUp size={16} color="#000000ff" />
+                  {new Date(project.created_at).toLocaleDateString('pt-BR', {
+                    month: 'long',
+                    year: 'numeric',
+                  })}
+                </div>
+              </div>
               
               <figure className={styles.imageContainer}>
                 <Image

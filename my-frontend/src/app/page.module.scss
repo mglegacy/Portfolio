@@ -146,7 +146,7 @@
 .infoLine {
   display: flex;
   justify-content: space-between; // tipo à esquerda, data à direita
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 1rem;
   width: 100%;
 }
@@ -167,6 +167,7 @@
   font-size: 0.9rem;
   color: var(--gray-70);
   white-space: nowrap; // evita quebra de linha
+  margin-top: 15px; // ajusta verticalmente para alinhar com type
 }
 
 .tecnologias{
