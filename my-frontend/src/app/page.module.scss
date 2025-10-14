@@ -143,11 +143,12 @@
   
 }
 
-.date {
-  margin-right: auto;
+.infoLine {
   display: flex;
+  justify-content: space-between; // tipo à esquerda, data à direita
   align-items: center;
-
+  margin-bottom: 1rem;
+  width: 100%;
 }
 
 .type{
@@ -155,7 +156,17 @@
   padding: 4px 8px;
   border-radius: 10px;
   display: inline-block;
-  justify-content: space-between;
+  line-height: 1;  // garante altura consistente
+  
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  gap: 4px; // espaço entre ícone e texto
+  font-size: 0.9rem;
+  color: var(--gray-70);
+  white-space: nowrap; // evita quebra de linha
 }
 
 .tecnologias{
