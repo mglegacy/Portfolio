@@ -29,51 +29,51 @@ export default  async function Home() {
   const projects = await handleListProjects();
 
   return (
-    <>
-      <div className={styles.container}>
-          <h1 className={styles.textOne}>Olá! Nós somos</h1>
-          <h1 className={styles.textTwo}>MG Legacy</h1>
-          <h2 className={styles.typing}>Construindo soluções digitais com tecnologia, performance e propósito.</h2>
+  <main className={styles.container}>
+    <header>
+      <h1 className={styles.textOne}>Olá! Nós somos</h1>
+      <h1 className={styles.textTwo}>MG Legacy</h1>
+      <h2 className={styles.typing}>
+        Construindo soluções digitais com tecnologia, performance e propósito.
+      </h2>
+    </header>
 
-           <div className={styles.containerBody}>
-              <h1>Projects</h1>
-          </div>
+    <section className={styles.containerBody}>
+      <h1>Projects</h1>
 
-              <div className={styles.listProjects}>
+      <section className={styles.listProjects}>
+        <ul className={styles.projectsGrid}>
+          {projects.map((project: Project) => (
+            <li key={project.id}>
+              <article className={styles.card}>
+                <header>
+                  <h3>{project.titulo}</h3>
+                  <h4 className={styles.type}>{project.tipo}</h4>
+                </header>
 
-                <div className={styles.projectsGrid}>
+                <figure className={styles.imageContainer}>
+                  <Image
+                    src={`http://localhost:8000/files/${project.banner}`}
+                    alt={project.titulo}
+                    fill
+                  />
+                </figure>
 
-                    {projects.map((project: Project) => (
-                      <button key={project.id} className={styles.project}>
-                        <div className={styles.card}>
-                          <h3>{project.titulo}</h3>
-                          
-                          <h4 className={styles.type}>{project.tipo}</h4>
+                <p className={styles.descricao}>{project.description}</p>
 
-                          <div className={styles.imageContainer}>
-                            <Image
-                              src={`http://localhost:8000/files/${project.banner}`}
-                              alt={project.titulo}
-
-                              fill
-                            />
-                            </div>
-
-                          <p className={styles.descricao}>{project.description}</p>
-
-                          <div className={styles.tecnologiesContainer}>
-                            {project.tecnologies.map((tech, index) => (
-                            <span key={index} className={styles.techTag}>
-                                  {tech}
-                                </span>
-                                ))}
-                              </div>
-                        </div>
-              </button>
-            ))}
-          </div>
-              </div>
-  </div>
-  </>
-  )
+                <footer className={styles.tecnologiesContainer}>
+                  {project.tecnologies.map((tech, index) => (
+                    <span key={index} className={styles.techTag}>
+                      {tech}
+                    </span>
+                  ))}
+                </footer>
+              </article>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </section>
+  </main>
+);
 }
