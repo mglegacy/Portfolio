@@ -12,19 +12,19 @@ export function Header(){
 
     return(
         <header className={styles.headerContainer}>
-            <div className={styles.headerMenu}>
+            <div className={styles.headerMenu} >
                 <Image
                 src={logoImg}
                 alt='Logo da Empresa'
                 />
                 <nav>
-                    <Link href='/' className={`${styles.text} ${pathname === '/' ? styles.active : ''}`}> Home </Link>
+                    <Link href='#home' className={`${styles.text} ${pathname === '/' ? styles.active : ''}`}> Home </Link>
 
-                    <Link href='/projects' className={`${styles.text} ${pathname === '/projects' ? styles.active : ''}`}> Projects </Link>
+                    <Link href='#projects' className={`${styles.text} ${pathname === '/projects' ? styles.active : ''}`}> Projects </Link>
 
-                    <Link href='/about' className={`${styles.text} ${pathname === '/about' ? styles.active : ''}`}> About </Link>
+                    <Link href='#about' className={`${styles.text} ${pathname === '/about' ? styles.active : ''}`}> About </Link>
                         
-                    <Link href='/contact' className={`${styles.text} ${pathname === '/contact' ? styles.active : ''}`}> Contact </Link>
+                    <Link href='#contact' className={`${styles.text} ${pathname === '/contact' ? styles.active : ''}`}> Contact </Link>
                 </nav>
             </div>
         </header>

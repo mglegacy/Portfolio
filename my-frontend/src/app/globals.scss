@@ -5,6 +5,11 @@
   outline: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 :root{ //Cores reaproveitadas
   --white: #fff;
   --black: #000;
@@ -15,6 +20,8 @@
 
   --blue-11: #07061f;
   --blue-21:#1c1961;
+
+  --black-purple: rgba(255, 255, 255, 0.05);
 }
 
 body {

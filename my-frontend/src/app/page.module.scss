@@ -87,9 +87,9 @@
 }
 
 .card {
-  background-color: #69698a;
+  background: var(--blue-11);
   border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 16px rgba(130, 130, 130, 0.1);
   width: 355px;
   height: 600px;
   padding: 1.5rem;
@@ -99,16 +99,17 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease; // controla a suavidade
   text-align: left;
   margin-top: 3rem;
+  border: 0.5px solid var(--white);
 
   &:hover {
     transform: scale(1.05); // aumenta 5% ao passar o mouse
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
   }
   
 
   h3{
     font-size: 1.80rem;
-    color: black;
+    color: rgb(156, 156, 156);
   }
 
   h4 {
@@ -122,7 +123,7 @@
  .descricao
   {
     margin-top: 2rem;
-    color: rgb(43, 42, 42);
+    color: rgb(129, 129, 129);
     font-size: 1.5rem;
     font-weight: bold;
     text-align: left;
@@ -164,21 +165,15 @@
   display: flex;
   align-items: center;
   gap: 4px; // espaço entre ícone e texto
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: var(--gray-70);
   white-space: nowrap; // evita quebra de linha
-  margin-top: 15px; // ajusta verticalmente para alinhar com type
+  margin-top: 9px; // ajusta verticalmente para alinhar com type
+   color: rgb(76, 76, 76);
+  font-weight: bold;
 }
 
-.tecnologias{
-  gap:0.5rem;
-  display: flex;
-  color: rgb(226, 15, 15);
-  margin-top: auto;
-  line-height: 1.4;
-  font-size: 20px;
 
-}
 
 .tecnologiesContainer {
   margin-top: auto; // força ficar no final do card
@@ -188,10 +183,66 @@
 }
 
 .techTag {
-  color: #222;     
+  color: rgb(156, 156, 156);     
   padding: 4px 8px;
   border-radius: 8px;
   font-size: 0.9rem;
   font-weight: bold;
-  border: 1px solid var(--blue-11);
+  border: 1px solid var(--white);
 }
+
+.about {
+  width: 100%;
+  max-width: 1200px;
+  margin: 10rem auto 0;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  h1 {
+    align-self: flex-start; // deixa o título à esquerda
+    font-size: clamp(2rem, 3vw, 3rem);
+    color: var(--white);
+  }
+}
+
+.containerAbout {
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+  line-height: 1.8;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--white);
+  text-align: center;
+  align-self: center; // centraliza a caixa horizontalmente
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  h3 {
+    font-weight: 400;
+    color: var(--white);
+  }
+
+  &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+    }
+}
+
+// Mobile
+@media (max-width: 768px) {
+  .about {
+    margin-top: 5rem;
+    padding: 0 1rem;
+    gap: 1.5rem;
+  }
+
+  .containerAbout {
+    max-width: 100%;
+    padding: 1.5rem 2rem;
+  }
+}
+

@@ -31,7 +31,7 @@ export default  async function Home() {
   const projects = await handleListProjects();
 
   return (
-  <main className={styles.container}>
+  <main id="#home" className={styles.container}>
     <header>
       <h1 className={styles.textOne}>Olá! Nós somos</h1>
       <h1 className={styles.textTwo}>MG Legacy</h1>
@@ -41,9 +41,10 @@ export default  async function Home() {
     </header>
 
     <section className={styles.containerBody}>
+
       <section className={styles.listProjects}>
 
-        <h1>Projects</h1>
+        <h1 id="projects"> Projetos </h1>
 
         <div className={styles.projectsGrid}>
           {projects.map((project: Project) => (
@@ -53,7 +54,7 @@ export default  async function Home() {
                <div className={styles.infoLine}>
                 <h4 className={styles.type}>{project.tipo}</h4>
                 <div className={styles.date}>
-                  <CalendarArrowUp size={16} color="#000000ff" />
+                  <CalendarArrowUp size={16} color="#dfdfdfff" />
                   {new Date(project.created_at).toLocaleDateString('pt-BR', {
                     month: 'long',
                     year: 'numeric',
@@ -83,6 +84,19 @@ export default  async function Home() {
           ))}
         </div>
       </section>
+
+      <section className={styles.about}>
+          <h1 id="about">Sobre Nós: </h1>
+          
+          <div className={styles.containerAbout}>
+            <h3>Sobre o MG Legacy
+            MG Legacy nasceu com o objetivo de representar meu crescimento como desenvolvedor e de mostrar o impacto que a tecnologia pode ter quando aplicada com intenção.
+            Cada projeto aqui é parte da minha evolução — uma mistura de criatividade, técnica e visão full stack.
+            “Full stack é apenas o começo. O objetivo é deixar um legado digital.”
+            </h3>
+          </div>
+      </section>
+      
     </section>
   </main>
 );
